@@ -1,10 +1,6 @@
 # Joystick-controlled-Transfer-Stage
-This repository contains python code to use a joystick and a GUI to control the transfer stage built by Thorlabs hardwares inside a traditional glove box.
+This repository contains python code to use a joystick and a GUI to control the transfer stage built by Thorlabs hardwares inside a traditional glove box remotely. The general idea is to achieve a "semi-automated transfer stage in glove box for air sensitive 2D materials". With the current version, you can freely use a joystick plus the side assist of a GUI to control the whole transfer process semi-automatically.
 
-The code mainly uses the package ctypes, which is a typical python package to exploit C++ commands. It is divided into several parts: connectivity.py to set the connection with the devices, movement.py to perform jogging, driving, stopping, etc. movements, position.py to report the real-time position of devices, newDeviceGUI.py to set up the joystick-device thread and the GUI-device thread, while main.py conclude all these programs and perform the final executation.
+The code mainly uses the package ctypes, which is a typical python package to exploit C++ commands. It is divided into several parts: connectivity.py to set the connection with the devices, movement.py to perform jogging, driving, stopping, etc. movements, position.py to report the real-time position of devices, camera.py to connect the camera and manipulate images in real-time, heater.py to connect and manipulate the heater LabVIEW vi, GUI.py to set up the joystick-device thread and the GUI-device thread, while main.py conclude all these programs and perform the final executation. globals.py and maths.py are axuiliary codes.
 
-The hardwares are Thorlabs KDC motors and KIM piezo, which needs to be called by its original .dll files. The joystick is a Xbox 360 wirelss joystick.
-
-This code can achieve using the remote joystick to control the transfer stage inside the glove box.
-
-
+The hardwares are Thorlabs KDC motors and KIM piezo, which needs to be called by its original .dll files. The joystick is a Xbox 360 wirelss joystick. The camera is a Basler Ace acA1920-40uc camera.
